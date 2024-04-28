@@ -76,7 +76,7 @@ def run_gcc():
     try:
         proc = subprocess.Popen(args, stderr=subprocess.PIPE)
         for line in proc.stderr:
-            print >> sys.stderr, line,
+            print(sys.stderr,line,)
             #interpret_warning(line)
 
         result = proc.wait()
